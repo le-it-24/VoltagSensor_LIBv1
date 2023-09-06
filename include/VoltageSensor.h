@@ -32,6 +32,10 @@ class VoltageSensor // Defines a class of voltage divider based input voltage se
         double resistor2; // Value of resistor2 (in ohms).
 
 
+        // Sensor Components.
+        unsigned int ADCpin; // Pin where Vsense reading is taken.
+
+
         // Voltage divider attributes:
 
 
@@ -50,10 +54,11 @@ class VoltageSensor // Defines a class of voltage divider based input voltage se
 
         void set_resistor1_val(double value);
         void set_resistor2_val(double value);
+        void set_ADCpin(unsigned int thisPin);
 
 
-        void get_Vsense();
-        void get_Vin();
+        double get_Vsense();
+        double get_Vin();
         
         
             
